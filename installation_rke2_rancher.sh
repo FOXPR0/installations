@@ -66,8 +66,9 @@ helm upgrade -i cert-manager jetstack/cert-manager --namespace cert-manager --cr
 
 ### Installing Rancher Server
 
-hostname_rancher=ec2-3-110-135-32.ap-south-1.compute.amazonaws.com
+read -p "Enter your hostname: " hostname_rancher
 
+echo Your provided hostname is $hostname_rancher
 password_rancher=bootStrapAllTheThings
 
 # helm install rancher
