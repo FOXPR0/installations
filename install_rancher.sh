@@ -18,7 +18,7 @@ systemctl disable --now ufw
 
 apt-mark hold linux-image-*
 apt update
-apt install nfs-common -y  
+apt install nfs-common curl -y  
 apt upgrade -y 
 apt-mark unhold linux-image-*
 # clean up
