@@ -1,11 +1,9 @@
-
-:
 #!/bin/bash
 # Setting a return status for a function
 
 
 
-### Ubuntu:
+### This script is specially desgined for Ubuntu OS
 
 configure_ubuntu () {
 
