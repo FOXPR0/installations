@@ -90,7 +90,13 @@ password_rancher=bootStrapAllTheThings
 # helm install rancher
 helm upgrade -i rancher rancher-latest/rancher --create-namespace --namespace cattle-system --set hostname=${hostname_rancher} --set bootstrapPassword=${password_rancher} --set replicas=1
 
- kubectl get pods -A
+### To install specific version rancher
+## Get rancher version first
+# helm search repo rancher-latest --versions
+
+# helm upgrade -i rancher rancher-latest/rancher --version=2.6.9  --create-namespace --namespace cattle-system --set hostname=${hostname_rancher} --set bootstrapPassword=${password_rancher} --set replicas=1
+
+kubectl get pods -A
 
 
 }
