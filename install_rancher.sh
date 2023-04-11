@@ -4,31 +4,29 @@
 
 
 
-
-
-
 ### Ubuntu:
-
-
-
 
 configure_ubuntu () {
 
 ### Rke2 Server Installation:
-
-
 
 # Ubuntu instructions 
 # stop the software firewall
 systemctl disable --now ufw
 
 # get updates, install nfs, and apply
+
+apt-mark hold linux-image-*
 apt update
 apt install nfs-common -y  
-apt upgrade -y
-
+apt upgrade -y 
+apt-mark unhold linux-image-*
 # clean up
 apt autoremove -y
+
+# To install kernel, you can use below command
+# apt install -y linux-image-*
+
 
 
 # On rancher1
