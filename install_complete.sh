@@ -340,6 +340,8 @@ fi
 
 while true
 do
+  sleep 1
+  clear
   show_menu
   case $choice in
     1) configure_ubuntu ;;
