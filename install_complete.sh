@@ -314,7 +314,7 @@ sudo k3s kubectl get nodes
 
 # Function to display menu and prompt user for input
 show_menu ()  {
-  echo "Please select an option:"
+  echo "Please select an option for Installations:"
   echo "1. Install RKE2 Server"
   echo "2. Install Rancher Manager Using Helm"
   echo "3. Install Rancher Manager Using Docker"
