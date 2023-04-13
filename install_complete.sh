@@ -367,3 +367,4 @@ done
 ## Some old functions 
 #configure_ubuntu
 #install_rancher
+# Remove above old functions
