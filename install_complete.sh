@@ -329,7 +329,7 @@ show_menu ()  {
 invalid ()
 {
   clear
-  echo "Invalid option. Please try again."
+  echo  "Invalid option. Please try again. \n"
   sleep 1
 
 }
