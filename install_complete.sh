@@ -326,6 +326,13 @@ show_menu ()  {
   read -p "Enter your choice [1-8]: " choice
 }
 
+invalid ()
+{
+  clear
+  echo "Invalid option. Please try again."
+  sleep 1
+
+}
 
 
 
@@ -340,8 +347,8 @@ fi
 
 while true
 do
-  sleep 1
-  clear
+  #sleep 1
+  #clear
   show_menu
   case $choice in
     1) configure_ubuntu ;;
@@ -352,7 +359,8 @@ do
     6) install_rke ;;
     7) install_k3s ;;
     8) exit 0 ;;
-    *) echo "Invalid option. Please try again." ;;
+    *) invalid ;;
+   # *) echo "Invalid option. Please try again." ;;
   esac
 done
 
