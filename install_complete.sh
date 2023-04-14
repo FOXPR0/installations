@@ -6,10 +6,9 @@
 ### This script is specially desgined for Ubuntu OS
 
 download_kubectl () {
-
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x kubectl
-mv ./kubectl /usr/bin/kubectl
+  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  chmod +x kubectl
+  mv ./kubectl /usr/bin/kubectl
 }
 
 configure_ubuntu () {
