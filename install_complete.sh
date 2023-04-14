@@ -5,6 +5,13 @@
 
 ### This script is specially desgined for Ubuntu OS
 
+download_kubectl () {
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mv ./kubectl /usr/bin/kubectl
+}
+
 configure_ubuntu () {
 
 ### Rke2 Server Installation:
@@ -322,7 +329,8 @@ show_menu ()  {
   echo "5. Install Helm"
   echo "6. Install RKE"
   echo "7. Install k3s"
-  echo "8. Exit"
+  echo "8. Download Kubectl"
+  echo "9. Exit"
   read -p "Enter your choice [1-8]: " choice
 }
 
@@ -358,7 +366,8 @@ do
     5) install_helm ;;
     6) install_rke ;;
     7) install_k3s ;;
-    8) exit 0 ;;
+    8) download_kubectl ;;
+    9) exit 0 ;;
     *) invalid ;;
    # *) echo "Invalid option. Please try again." ;;
   esac
