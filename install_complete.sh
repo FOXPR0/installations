@@ -144,14 +144,14 @@ echo Your provided hostname is $hostname_rancher
 password_rancher=bootStrapAllTheThings
 
 # helm install rancher
-helm upgrade -i rancher rancher-latest/rancher --create-namespace --namespace cattle-system --set hostname=${hostname_rancher} --set bootstrapPassword=${password_rancher} --set replicas=1
+# helm upgrade -i rancher rancher-latest/rancher --create-namespace --namespace cattle-system --set hostname=${hostname_rancher} --set bootstrapPassword=${password_rancher} --set replicas=1
 
 ### To install specific version rancher
 ## Get rancher version first
 # helm search repo rancher-latest --versions
 
 
- helm upgrade -i rancher rancher-latest/rancher --version $RANCHER_VERSION  --create-namespace --namespace cattle-system --set hostname=${hostname_rancher} --set bootstrapPassword=${password_rancher} --set replicas=1
+helm upgrade -i rancher rancher-latest/rancher --version $RANCHER_VERSION  --create-namespace --namespace cattle-system --set hostname=${hostname_rancher} --set bootstrapPassword=${password_rancher} --set replicas=1
 
 kubectl get pods -A
 
