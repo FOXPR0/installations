@@ -58,7 +58,7 @@ kubectl get pods -A
 }
 
 
-function get_rancher_version {
+ get_rancher_version () {
   # Get list of available Rancher versions from GitHub API
   VERSIONS_URL="https://api.github.com/repos/rancher/rancher/releases"
   VERSIONS=$(curl -s $VERSIONS_URL | grep '"tag_name":' | cut -d '"' -f 4 | grep -v 'alpha\|beta' | sort -rV)
